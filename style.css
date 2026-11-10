@@ -1,0 +1,327 @@
+
+/* =================================
+   GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: orange;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+header {
+    background-color: #111;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    color: aqua;
+    font-size: 35px;
+}
+
+header h1 span {
+    color: white;
+}
+
+/* =================================
+   NAVIGATION
+================================= */
+
+nav {
+    background-color: #222;
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 17px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* =================================
+   HOME SECTION
+================================= */
+
+.home {
+    min-height: 100vh;
+    width: 100%;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/IMG-20260417-WA0020.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+}
+
+.home h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.home h1 span {
+    display: block;
+    color: aqua;
+}
+
+.home p {
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* LOGIN BUTTON */
+
+.home a {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home a:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* =================================
+   GENERAL SECTIONS
+================================= */
+
+section:not(.home) {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #111;
+    margin-bottom: 25px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =================================
+   ABOUT SECTION
+================================= */
+
+#about {
+    background-color: white;
+}
+
+#about p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* =================================
+   PROFILE SECTION
+================================= */
+
+#profile {
+    background-color: #e5e5e5;
+}
+
+#profile p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+#contact {
+    background-color: #222;
+    color: white;
+}
+
+#contact h2 {
+    color: aqua;
+}
+
+#contact p {
+    margin-bottom: 25px;
+}
+
+/* CONTACT FORM */
+
+#contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 12px;
+}
+
+#contact label {
+    color: white;
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: aqua;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+/* SUBMIT BUTTON */
+
+#contact button {
+    padding: 14px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact button:hover {
+    background-color: aqua;
+}
+
+/* =================================
+   SOCIAL MEDIA
+================================= */
+
+.social-links {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: orange;
+}
+
+.social-links i {
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        padding: 12px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 14px;
+    }
+
+    .home {
+        min-height: 85vh;
+        padding: 20px;
+    }
+
+    .home h1 {
+        font-size: 35px;
+    }
+
+    .home p {
+        font-size: 17px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
